@@ -7,7 +7,7 @@ var app = express();
 app.get('/', function (req, res) {
    console.log("主页 GET 请求");
       console.log(req.originalUrl);
-   res.send();
+   res.send( __dirname + "\\" + "index.htm");
 })
  
  
@@ -36,7 +36,7 @@ app.get('/', function (req, res) {
 //})
  
  
-var server = app.listen(8080, function () {
+var server = app.listen(8081, function () {
  
   var host = server.address().address
   var port = server.address().port
